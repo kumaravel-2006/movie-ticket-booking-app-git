@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-left">
+        <span class="logo">🎬 MovieBooking</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Movies</a></li>
+        <li><a href="tickets.html">My Tickets</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<h2> Book Your Tickets</h2>
+
+<div class="step">
+    <h3>Step 1: Movie: <span id="movieName"></span></h3>
+
+</div>
+
+
+<div class="step">
+    <h3>Step 2: Tickets</h3>
+    <input type="number" id="tickets" value="1" min="1" max = "16">
+</div>
+
+<p id="seatInfo"></p>
+
+<button class="primary-btn" onclick="generateBill()">Generate Bill</button>
+
+<div id="billOverlay" class = "overlay hidden">
+    <div class = "bill-card" id = "billBox"></div>
+</div>
+
+
+
+<button id="payBtn" class="primary-btn hidden" onclick="pay()">
+    Pay (Pending)
+</button>
+
+<script src="js/booking.js"></script>
+</body>
+</html>
