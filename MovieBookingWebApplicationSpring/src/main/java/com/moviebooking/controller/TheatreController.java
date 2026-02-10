@@ -22,7 +22,7 @@ public class TheatreController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Theatre> getTheatreById(@PathVariable int id) {
+    public ResponseEntity<Theatre> getTheatreById(@PathVariable("id") int id) {
         Theatre theatre = theatreService.getTheatreById(id);
         if (theatre == null) {
             return ResponseEntity.notFound().build();
@@ -49,7 +49,7 @@ public class TheatreController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTheatre(@PathVariable int id) {
+    public ResponseEntity<Void> deleteTheatre(@PathVariable("id") int id) {
         if (!theatreService.exists(id)) {
             return ResponseEntity.notFound().build();
         }

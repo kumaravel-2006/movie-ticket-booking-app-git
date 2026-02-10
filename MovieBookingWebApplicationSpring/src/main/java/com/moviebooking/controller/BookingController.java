@@ -21,7 +21,7 @@ public class BookingController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Booking> getBookingById(@PathVariable int id) {
+    public ResponseEntity<Booking> getBookingById(@PathVariable("id") int id) {
         Booking booking = bookingService.getBookingById(id);
         if (booking == null) {
             return ResponseEntity.notFound().build();
@@ -36,7 +36,7 @@ public class BookingController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> cancelBooking(@PathVariable int id) {
+    public ResponseEntity<Void> cancelBooking(@PathVariable("id") int id) {
         if (!bookingService.exists(id)) {
             return ResponseEntity.notFound().build();
         }
