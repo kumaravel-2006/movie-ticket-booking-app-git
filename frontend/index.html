@@ -1,47 +1,47 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Movie Booking</title>
     <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-<header>
-    <h1>Movie Booking System</h1>
-    <p>Your one-stop destination to book movie tickets instantly</p>
+  </head>
+  <body>
+    <header>
+      <h1>Movie Booking System</h1>
+      <p>Your one-stop destination to book movie tickets instantly</p>
 
-    <nav class="navbar">
+      <nav class="navbar">
         <div class="nav-left">
-            <span class="logo">🎬 MovieBooking</span>
+          <span class="logo">🎬 MovieBooking</span>
         </div>
 
         <ul class="nav-links">
-            <li><a href="index.html">Movies</a></li>
-            <li><a href="tickets.html">My Tickets</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+          <li><a href="index.html">Movies</a></li>
+          <li><a href="tickets.html">My Tickets</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
+    </header>
 
-</header>
-
-
-<section class="about">
-    <h2>Why Choose Us?</h2>
-    <p>
+    <section class="about">
+      <h2>Why Choose Us?</h2>
+      <p>
         Browse movies, select your favourite theatre, generate your bill
         instantly and enjoy a smooth booking experience.
-    </p>
-</section>
+      </p>
+    </section>
 
-<button class="primary-btn" onclick="goToMovies()">View Movies</button>
+    <button class="primary-btn" onclick="goToMovies()">View Movies</button>
 
-<script>
-    function goToMovies() {
-      window.location.href = "movies.html";
-    }
-</script>
-</body>
+    <button id="logoutBtn">Logout</button>
+
+    <script src="js/logout.js"></script>
+
+    <script>
+      function goToMovies() {
+        window.location.href = "movies.html";
+      }
+    </script>
+  </body>
 </html>
-
-
